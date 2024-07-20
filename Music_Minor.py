@@ -16,7 +16,7 @@ if gpus:
     tf.config.experimental.set_memory_growth(gpus[0], True)
 
 # Step 1: Data Preprocessing
-kern_files_directory = "G:/flow/kern file_1"
+kern_files_directory = "kern file"
 kern_files = os.listdir(kern_files_directory)
 
 # Parse the KRISTALISER files and extract musical features
@@ -120,7 +120,7 @@ for pattern in prediction_output:
 midi_stream = stream.Stream(output_notes)
 
 # Save the stream as a MIDI file
-output_file_path = "G:/Outputtest.mid"
+output_file_path = "Outputtest.mid"
 midi_stream.write('midi', fp=output_file_path)
 
 print("Generated melody saved successfully.")
