@@ -16,7 +16,7 @@ if gpus:
     tf.config.experimental.set_memory_growth(gpus[0], True)
 
 # Step 1: Data Preprocessing
-kern_files_directory = "kern file"
+kern_files_directory = "kern file" # change the dir where .krn files are located.
 kern_files = os.listdir(kern_files_directory)
 
 # Parse the KRISTALISER files and extract musical features
@@ -69,7 +69,7 @@ model.fit(X, y, epochs=100, batch_size=30)
 
 # Step 4: Save the Model
 # Save your trained GNN model for future use
-model.save("G:/flow/model")
+model.save("flow/model")  # Change the location of model where to save it.
 
 print("Model trained and saved successfully.")
 
@@ -120,7 +120,7 @@ for pattern in prediction_output:
 midi_stream = stream.Stream(output_notes)
 
 # Save the stream as a MIDI file
-output_file_path = "Outputtest.mid"
+output_file_path = "Outputtest.mid" # change the dir where output you want to save it.
 midi_stream.write('midi', fp=output_file_path)
 
 print("Generated melody saved successfully.")
